@@ -9,7 +9,13 @@ Before starting the analysis, the user is requested to clone the repository to h
 ```bash
 $ git clone https://github.com/ArisStefanosSn/HFproteomics
 ```
-This will store the folder `HFproteomics` in the working directory of the user. This folder contains all necessary files to run the pipeline. Specifically, subfolder `ProteomicsData` has all **data related to the plasma proteomics analysis**:
+This will store the folder `HFproteomics` in the working directory of the user. This folder contains all necessary files to run the pipeline. First, the zipped file `ProteomicsData.tar.gz` should be extracted as:
+
+```bash
+$ tar -xf ProteomicsData.tar.gz
+```
+
+The extracted folder `ProteomicsData` has all **data related to the plasma proteomics analysis**:
 
 1. source.R: It contains the R libraries and functions used for this analysis. The user is requested to dowload and install the necessary R packages in his machine before performing the analysis. These packages are `Hmisc`, `limma`, `metaRNASeq`, `Rtsne`, `ggplot2`, `lawstat`, `gtools`, `superheat`, `stringr`, `WGCNA`, `gplots`, `plotly`, `scales`, `data.table`, `scater`, `scran`, `randomForest`, `splines` and `ggfortify`. Each package can be downloaded from  Bioconductor as (from R studio). For example, to install `limma`:
 
