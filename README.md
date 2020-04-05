@@ -38,5 +38,4 @@ R> BiocManager::install("limma")
 
 11. CytoscapeInput_HF_edges_blue.txt: It contains the edges of the WGCNA network of the HF patients. It is used to retrieve all the proteins that are directly connected to the significant network proteins of our study.
 
-
-
+The transcriptomics analysis of Section 5
