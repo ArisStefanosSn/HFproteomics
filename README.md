@@ -38,7 +38,7 @@ R> BiocManager::install("limma")
 
 11. CytoscapeInput_HF_edges_blue.txt: It contains the edges of the WGCNA network of the HF patients. It is used to retrieve all the proteins that are directly connected to the significant network proteins of our study.
 
-**The data related to the transcriptomics analysis** of Section 5 come in the .RData format. Each dataset consists of three components, i.e. a matrix of normalised gene expression profiles for *G* genes and *N* samples, a matrix summarising the design of the experiment and a matrix of pre-computed differential expression estimates. Specifically: 
+**The data related to the transcriptomics analysis** of Section 5 are stored in the *.RData* format. Each dataset consists of three components, i.e. a matrix of normalised gene expression profiles for *G* genes and *N* samples (cells or nuclei), a matrix summarising the design of the experiment and the characteristics of the *N* samples and a matrix of pre-computed differential expression estimates forthe *G* genes. Specifically: 
 
 1. nonMyo.RData: It contains the data of the 440 Sham and 390 MI mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment [2]. The raw data are available upn reasonable request from the authors. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
 
