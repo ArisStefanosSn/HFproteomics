@@ -11,8 +11,12 @@ This will store the folder `HFproteomics` in the working directory of the user. 
 
 1. source.R: It contains the R libraries and functions used for this analysis. The user is requested to dowload and install the necessary R packages in his machine before performing the analysis. These packages are `Hmisc`, `limma`, `metaRNASeq`, `Rtsne`, `ggplot2`, `lawstat`, `gtools`, `superheat`, `stringr`, `WGCNA`, `gplots`, `plotly`, `scales`, `data.table`, `scater`, `scran`, `randomForest`, `splines` and `ggfortify`. Each package can be downloaded from  Bioconductor as
 
+```bash
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
-
+BiocManager::install("limma")
+```
 
 Somalogic_Design_CDCS.txt: It contains the experimental / clinical information of each patient of the CDCS cohort. The variables have been used for data adjustment / normalisation and in the main analysis of protein prioritisation.
 
