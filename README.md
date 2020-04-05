@@ -1,6 +1,6 @@
 # HFproteomics
 
-This document describes the computational analysis of the **Chan M, Motakis E, Tan SH et al. Prioritizing Post-Myocardial Infarction Heart Failure Candidates Using Plasma Proteomics and Single-Cell Transcriptomics. Submitted to Circulation, 2020 (under review)**. The detailed pipeline is found at [edit here]
+This document describes the computational analysis of the **Chan M, Motakis E, Tan SH et al. Prioritizing Post-Myocardial Infarction Heart Failure Candidates Using Plasma Proteomics and Single-Cell Transcriptomics. Submitted to Circulation, 2020 (under review)**[1]. The detailed pipeline is found at [edit here]
 
 Before staring the analysis, the user is requested to clone the repository to his machine as (from the terminal):
 
@@ -40,12 +40,20 @@ R> BiocManager::install("limma")
 
 **The data related to the transcriptomics analysis** of Section 5 come in the .RData format. Each dataset consists of three components, i.e. a matrix of normalised gene expression profiles for *G* genes and *N* samples, a matrix summarising the design of the experiment and a matrix of pre-computed differential expression estimates. Specifically: 
 
-1. nonMyo.RData: It contains the data of the 440 Sham and 390 MI mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
+1. nonMyo.RData: It contains the data of the 440 Sham and 390 MI mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment [2]. The raw data are available upn reasonable request from the authors. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
 
-2. snMyo.RData: It contains the data of the 85 Sham and 100 TAC high-quality cardiomycyte nuclei of our single-nuclei RNA-seq experiment. The raw data are available from GSE. The differential expression analysis was done with edgeR comparing the Sham vs TAC conditions.
+2. snMyo.RData: It contains the data of the 85 Sham and 100 TAC high-quality cardiomycyte nuclei of our single-nuclei RNA-seq experiment [3]. The raw data are available from **NCBI SRA SRP049944**, under the BioProject code PRJNA264588. The differential expression analysis was done with edgeR comparing the Sham vs TAC conditions.
 
-3. tsMyo.RData: It contains the data of the 88 Sham, 69 day-3 TAC, 83 day-7 TAC and 73 4-weeks TAC
+3. tsMyo.RData: It contains the data of the 88 Sham, 69 day-3 TAC, 83 day-7 TAC and 73 4-weeks TAC high-quality cardiomycytes of the single-cell RNA-seq experiment **GSE95140**[4]. The differential expression analysis was done with edgeR comparing all pairwise Sham vs TAC conditions.
 
-4. hMyo.RData:
+4. hMyo.RData: It contains the data of the 71 Healthy and 488 DCM high-quality human cardiomycytes of the single-cell RNA-seq experiment **GSE95140**[4]. The differential expression analysis was done with edgeR comparing the Healthy vs DCM conditions.
 
+## References
 
+[1] Chan M, Motakis E, Tan SH et al. Prioritizing Post-Myocardial Infarction Heart Failure Candidates Using Plasma Proteomics and Single-Cell Transcriptomics. Submitted to Circulation, 2020 (under review).
+
+[2] Ackers-Johnson M, Li PY, Holmes AP, O'Brien SM, Pavlovic D and Foo RS. A Simplified, Langendorff-Free Method for Concomitant Isolation of Viable Cardiac Myocytes and Nonmyocytes From the Adult Mouse Heart. Circ Res. 2016;119:909-20.
+
+[3] See K, Tan WLW, Lim EH, Tiang Z, Lee LT, Li PYQ, Luu TDA, Ackers-Johnson M and Foo RS. Single cardiomyocyte nuclear transcriptomes reveal a lincRNA-regulated de-differentiation and cell cycle stress-response in vivo. Nature communications. 2017;8:225.
+
+[4] Nomura S, Satoh M, Fujita T, Higo T, Sumida T, Ko T, Yamaguchi T, Tobita T, Naito AT, Ito M, Fujita K, Harada M, Toko H, Kobayashi Y, Ito K, Takimoto E, Akazawa H, Morita H, Aburatani H and Komuro I. Cardiomyocyte gene programs encoding morphological and functional signatures in cardiac hypertrophy and failure. Nat Commun. 2018;9:4435.
