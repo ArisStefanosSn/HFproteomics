@@ -9,7 +9,7 @@ $ git clone https://github.com/ArisStefanosSn/HFproteomics
 ```
 This will store the folder `HFproteomics` in the working directory of the user. This folder contains all necessary files to run the pipeline. Specifically, subfolder `ProteomicsData` has all **data related to the plasma proteomics analysis**:
 
-1. source.R: It contains the R libraries and functions used for this analysis. The user is requested to dowload and install the necessary R packages in his machine before performing the analysis. These packages are `Hmisc`, `limma`, `metaRNASeq`, `Rtsne`, `ggplot2`, `lawstat`, `gtools`, `superheat`, `stringr`, `WGCNA`, `gplots`, `plotly`, `scales`, `data.table`, `scater`, `scran`, `randomForest`, `splines` and `ggfortify`. Each package can be downloaded from  Bioconductor as (from R studio):
+1. source.R: It contains the R libraries and functions used for this analysis. The user is requested to dowload and install the necessary R packages in his machine before performing the analysis. These packages are `Hmisc`, `limma`, `metaRNASeq`, `Rtsne`, `ggplot2`, `lawstat`, `gtools`, `superheat`, `stringr`, `WGCNA`, `gplots`, `plotly`, `scales`, `data.table`, `scater`, `scran`, `randomForest`, `splines` and `ggfortify`. Each package can be downloaded from  Bioconductor as (from R studio). For example, to install `limma`:
 
 ```bash
 R> if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -40,11 +40,11 @@ R> BiocManager::install("limma")
 
 **The data related to the transcriptomics analysis** of Section 5 come in the .RData format. Each dataset consists of three components, i.e. a matrix of normalised gene expression profiles for *G* genes and *N* samples, a matrix summarising the design of the experiment and a matrix of pre-computed differential expression estimates. Specifically: 
 
-1. nonMyo.RData: It contains the data of the 830 mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
+1. nonMyo.RData: It contains the data of the 440 Sham and 390 MI mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
 
-2. snMyo.RData:
+2. snMyo.RData: It contains the data of the 85 Sham and 100 TAC high-quality cardiomycyte nuclei of our single-nuclei RNA-seq experiment. The raw data are available from GSE. The differential expression analysis was done with edgeR comparing the Sham vs TAC conditions.
 
-3. tsMyo.RData:
+3. tsMyo.RData: It contains the data of the 88 Sham, 69 day-3 TAC, 83 day-7 TAC and 73 4-weeks TAC
 
 4. hMyo.RData:
 
