@@ -7,7 +7,7 @@ Before staring the analysis, the user is requested to clone the repository to hi
 ```bash
 $ git clone https://github.com/ArisStefanosSn/HFproteomics
 ```
-This will store the folder `HFproteomics` in the working directory of the user. This folder contains all necessary files to run the pipeline. Specifically, subfolder `ProteomicsData` has all data related to the plasma proteomics analysis:
+This will store the folder `HFproteomics` in the working directory of the user. This folder contains all necessary files to run the pipeline. Specifically, subfolder `ProteomicsData` has all **data related to the plasma proteomics analysis**:
 
 1. source.R: It contains the R libraries and functions used for this analysis. The user is requested to dowload and install the necessary R packages in his machine before performing the analysis. These packages are `Hmisc`, `limma`, `metaRNASeq`, `Rtsne`, `ggplot2`, `lawstat`, `gtools`, `superheat`, `stringr`, `WGCNA`, `gplots`, `plotly`, `scales`, `data.table`, `scater`, `scran`, `randomForest`, `splines` and `ggfortify`. Each package can be downloaded from  Bioconductor as (from R studio):
 
@@ -38,4 +38,14 @@ R> BiocManager::install("limma")
 
 11. CytoscapeInput_HF_edges_blue.txt: It contains the edges of the WGCNA network of the HF patients. It is used to retrieve all the proteins that are directly connected to the significant network proteins of our study.
 
-The transcriptomics analysis of Section 5
+**The data related to the transcriptomics analysis** of Section 5 come in the .RData format. Each dataset consists of three components, i.e. a matrix of normalised gene expression profiles for *G* genes and *N* samples, a matrix summarising the design of the experiment and a matrix of pre-computed differential expression estimates. Specifically: 
+
+1. nonMyo.RData: It contains the data of the 830 mouse cardiac fibroblasts of our respective single-cell RNA-seq expreriment. The differential expression analysis was done with Seurat comparing the Sham vs MI conditions.
+
+2. snMyo.RData:
+
+3. tsMyo.RData:
+
+4. hMyo.RData:
+
+
